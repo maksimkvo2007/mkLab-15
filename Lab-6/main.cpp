@@ -16,6 +16,10 @@ void outputArrayData(const double* a, int n){
 }
 double sumArray(const double* a, int n){
     double sum = 0.0;
+    for (int i = 0; i < n; i++){
+        sum += *(a + i);
+    }
+    return sum;
 }
 
 int main(){
@@ -25,4 +29,8 @@ int main(){
     enterArrayData(a, N);
     outputArrayData(a, N);
     double sum = sumArray(a, N);
+    cout << "Sum: " << sum << endl;
+
+    delete[] a;
+    a = nullptr;
 }
