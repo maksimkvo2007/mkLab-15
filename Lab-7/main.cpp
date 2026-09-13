@@ -29,10 +29,13 @@ int main(){
     *(names + 4) = "Junio";
 
     cout << "Original array: ";
+    displayArray(naems, size);
 
+    names = reverseArray(names, size);
+    cout << "Reversed array: ";
+    displayArray(names, size);
 
-
-
-
+    delete[] names; 
+    names = nullptr;
 
 }
