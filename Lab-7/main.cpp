@@ -2,11 +2,17 @@
 #include <string>
 using namespace std;
 
-void displayArray(const string* , int size){
-
+void displayArray(const string* arr, int size){
+    for (int i=0; i < size; i++){
+        cout << *(arr + i) << " ";
+    }
+    cout << endl;
 }
-string* reverseArray(){
-    
+string* reverseArray(const string* arr, int size){
+    for (int i = 0; i < size / 2; i++){
+        swap(*(arr + i), *(arr + (size - 1 - i)));
+    }
+    return arr;
 }
 
 
