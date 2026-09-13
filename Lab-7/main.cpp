@@ -1,5 +1,6 @@
 #include <iostream> 
 #include <string>
+#include <algorithm>
 using namespace std;
 
 void displayArray(const string* arr, int size){
@@ -8,7 +9,7 @@ void displayArray(const string* arr, int size){
     }
     cout << endl;
 }
-string* reverseArray(const string* arr, int size){
+string* reverseArray(string* arr, int size){
     for (int i = 0; i < size / 2; i++){
         swap(*(arr + i), *(arr + (size - 1 - i)));
     }
@@ -29,7 +30,7 @@ int main(){
     *(names + 4) = "Junio";
 
     cout << "Original array: ";
-    displayArray(naems, size);
+    displayArray(names, size);
 
     names = reverseArray(names, size);
     cout << "Reversed array: ";
