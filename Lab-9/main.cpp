@@ -3,6 +3,8 @@
 #include <array> 
 #include <vector>
 
+using namespace std;
+
 int main() {
     array<int, 30> scores;
     ifstream myFile("scores.txt");
@@ -26,6 +28,7 @@ int main() {
     vector<int> grades;
     myFile.open("scores.txt");
 
+    int num;
     while (myFile >> num) {
         grades.push_back(num);
     }
