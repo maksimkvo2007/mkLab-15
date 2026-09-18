@@ -34,9 +34,9 @@ int main() {
     }
     myFile.close();
 
-    cout << "Array Info\n";
-    cout << "Size: " << scores.size() << endl;
-    cout << "First: " << scores.front() << endl;
-    cout << "Middle: " << scores.at(15) << endl;
-    cout << "Last: " << scores.back() << endl;
+    cout << "\nVector Info\n";
+    cout << "Size: " << grades.size() << endl;
+    cout << "First: " << grades.front() << endl;
+    cout << "Middle: " << grades.at(15) << endl;
+    cout << "Last: " << grades.back() << endl;
 }
