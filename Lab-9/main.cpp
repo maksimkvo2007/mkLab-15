@@ -7,7 +7,7 @@ using namespace std;
 
 int main() {
     array<int, 30> scores;
-    ifstream myFile("scores.txt");
+    ifstream myFile("Lab-9/scores.txt");
 
     if (!myFile) {
         cout << "Could not open file!" << endl;
@@ -26,7 +26,7 @@ int main() {
     cout << "Last: " << scores.back() << endl;
 
     vector<int> grades;
-    myFile.open("scores.txt");
+    myFile.open("Lab-9/scores.txt");
 
     int num;
     while (myFile >> num) {
