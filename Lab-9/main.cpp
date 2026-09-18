@@ -3,8 +3,6 @@
 #include <array> 
 #include <vector>
 
-using namespace std;
-
 int main() {
     array<int, 30> scores;
     ifstream myFile("scores.txt");
@@ -28,7 +26,14 @@ int main() {
     vector<int> grades;
     myFile.open("scores.txt");
 
-    
+    while (myFile >> num) {
+        grades.push_back(num);
+    }
+    myFile.close();
 
-
+    cout << "Array Info\n";
+    cout << "Size: " << scores.size() << endl;
+    cout << "First: " << scores.front() << endl;
+    cout << "Middle: " << scores.at(15) << endl;
+    cout << "Last: " << scores.back() << endl;
 }
