@@ -11,7 +11,9 @@ struct Player{
 
 int main(){ //So far Idea is like a clash of clans theme if your familiar 
     int numPlayers;
-
+    string clanName;
+    cout << "Clan Name: ";
+    getline(cin, clanName);
     cout << "How many players? ";
     cin >> numPlayers;
     Player* clan = new Player[numPlayers];
@@ -21,9 +23,19 @@ int main(){ //So far Idea is like a clash of clans theme if your familiar
         cout << "\nEnter players name: ";
         cin >> clan[i].name;
 
-        cout << "Enter Town Hall Levels: ";
+        cout << "Enter Town Hall Level: ";
         cin >> clan[i].thLevel;
 
-        cout << "Number of troops: "
+        cout << "How many armys do they use: ";
+        cin >> clan[i].numArmies; 
+
+        clan[i].armies = new string[clan[i].numArmies];
+        cin.ignores();
+
+        for (int a = 0; a < clan[i].numArmies; a++){
+            cout << "Army name: ";
+            getline(cin, clan[i].armies[a]);
+        }
     }
+    cout << "\nClan Roster: "
 }
