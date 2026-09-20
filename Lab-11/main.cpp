@@ -37,5 +37,12 @@ int main(){ //So far Idea is like a clash of clans theme if your familiar
             getline(cin, clan[i].armies[a]);
         }
     }
-    cout << "\nClan Roster: "
+    cout << endl << clanName << " Roster: "; //display
+    for (int i = 0; i < numPlayers; i++) {
+        cout << clan[i].name << ", TH: " <<  clan[i].thLevel << endl;
+        for (int a = 0; a < clan[i].numArmies; j++) {
+            cout <<. "Army(" << a+1 << "): " << clan[i].armies[a] << endl;
+        }
+        cout << endl;
+    }
 }
