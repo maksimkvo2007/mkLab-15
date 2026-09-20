@@ -45,4 +45,8 @@ int main(){ //So far Idea is like a clash of clans theme if your familiar
         }
         cout << endl;
     }
+    for (int i =  0; i < numPlayers; i++){
+        delete[] clan[i].armies
+    }
+    delete[] clan;
 }
