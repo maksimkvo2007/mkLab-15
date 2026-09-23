@@ -12,7 +12,7 @@ int main(){
     Student info[1000];
     int count = 0;
    
-    ifstream inFile("210-lab-13-grades.txt"); // reads file
+    ifstream inFile("Lab-13/210-lab-13-grades.txt"); // reads file
     while (inFile >> info[count].id >> info[count].score) {
         count++;
     }
@@ -29,7 +29,7 @@ int main(){
         info[min] = temp;
     }
 
-    ofstream outFile("210-lab-13-grades-sorted.txt");
+    ofstream outFile("Lab-13/210-lab-13-grades-sorted.txt");
     for (int i = 0; i < count; i++) {
         outFile << info[i].id << " " << info[i].score << "\n";
     }
