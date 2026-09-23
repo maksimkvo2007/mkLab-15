@@ -39,7 +39,13 @@ public:
     int getBlue() {
         return blue;
     }
-}
+
+    void print() {
+        cout << "RGB(" << setw(3) << red << ", " 
+             << setw(3) << green << ", " 
+             << setw(3) << blue << ")" << endl;
+    }
+};
 
 int main(){
     Color color1;
