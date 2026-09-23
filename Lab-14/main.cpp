@@ -27,7 +27,7 @@ public:
         blue = b;
     }
 
-    // Getter member functions[cite: 1]
+    // Getter member functions
     int getRed() {
         return red;
     }
@@ -46,9 +46,27 @@ int main(){
     Color color2;
     Color color3;
 
+    //adding value to each color
     color1.setRed(255);
     color1.setGreen(0);
     color1.setBlue(0);
 
-    
+    color2.setRed(0);
+    color2.setGreen(255);
+    color2.setBlue(0);
+
+    color3.setRed(0);
+    color3.setGreen(0);
+    color3.setBlue(255);
+
+    //Output
+    cout << "Color 1 (Red):    ";
+    color1.print();
+
+    cout << "Color 2 (Green):  ";
+    color2.print();
+
+    cout << "Color 3 (Blue): ";
+    color3.print();
+
 }
