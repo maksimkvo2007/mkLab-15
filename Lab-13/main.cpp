@@ -18,7 +18,7 @@ int main(){
     }
     inFile.close();
 
-    for (int i = 0; i < count - 1; i++) {
+    for (int i = 0; i < count - 1; i++) { //Ascending sort
         int min = i;
         for (int j = i + 1; j < count; j++) {
             if (info[j].id < info[min].id) min = j;
@@ -28,4 +28,19 @@ int main(){
         info[i] = info[min];
         info[min] = temp;
     }
+
+    ofstream outFile("210-lab-13-grades-sorted.txt");
+    for (int i = 0; i < count; i++) {
+        outFile << info[i].id << " " << info[i].score << "\n";
+    }
+    outFile.close();
+
+    double sum = 0, varSum = 0;
+    for (int i = 0; i < count; i++) sum += info[i].score;
+    double mean = sum / count;
+
+    for (int i = 0; i < count; i++) varSum += pow(info[i].score - mean, 2);
+    double stdDev = sqrt(varSum / count);
+
+
 }
