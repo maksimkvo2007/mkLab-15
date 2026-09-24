@@ -29,7 +29,10 @@ private:
 
 int main(){
     vector<Movie> list;
-    ifstream file("input.txt");
+    ifstream file("Lab-15/input.txt");
+
+    string t, w; 
+    int y;
 
     while (getline(file, t)) {
         file >> y;
