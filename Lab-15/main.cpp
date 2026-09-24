@@ -43,4 +43,9 @@ int main(){
         
         list.push_back(m);
     }
+    file.close();
+
+    for (int i = 0; i < list.size(); i++) {
+        list[i].print();
+    }
 }
