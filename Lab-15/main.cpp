@@ -5,6 +5,7 @@
 
 using namespace std;
 
+//class that holds the movie info
 class Movie {
 private:
     string writer;
@@ -12,11 +13,11 @@ private:
     string title;
 
     public:
-    void setWriter(string w) { writer = w; }
+    void setWriter(string w) { writer = w; } //save data
     void setYear(int y) { year = y; }
     void setTitle(string t) { title = t; }
 
-    string getWriter() { return writer; }
+    string getWriter() { return writer; }//retrieve
     int getYear() { return year; }
     string getTitle() { return title; }
 
@@ -28,12 +29,13 @@ private:
 };
 
 int main(){
-    vector<Movie> list;
+    vector<Movie> list; //creating a list
     ifstream file("Lab-15/input.txt");
 
     string t, w; 
     int y;
 
+    //continues to read until empty
     while (getline(file, t)) {
         file >> y;
         file.ignore(); 
@@ -47,7 +49,7 @@ int main(){
         list.push_back(m);
     }
     file.close();
-
+    //loops to print
     for (int i = 0; i < list.size(); i++) {
         list[i].print();
     }
